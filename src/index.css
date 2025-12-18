@@ -11,74 +11,74 @@
 
 @layer base {
   :root {
-    /* Warm, calming palette */
-    --background: 40 30% 98%;
-    --foreground: 30 15% 20%;
+    /* Bright, uplifting palette */
+    --background: 0 0% 100%;
+    --foreground: 220 30% 12%;
 
-    --card: 40 25% 99%;
-    --card-foreground: 30 15% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 12%;
 
-    --popover: 40 25% 99%;
-    --popover-foreground: 30 15% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
 
-    /* Soft sage green - calm, nature-inspired */
-    --primary: 150 25% 45%;
-    --primary-foreground: 40 30% 98%;
-    --primary-soft: 150 30% 92%;
-    --primary-glow: 150 35% 85%;
+    /* Vibrant teal - calming yet energetic */
+    --primary: 168 65% 38%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 168 55% 92%;
+    --primary-glow: 168 50% 82%;
 
-    /* Warm terracotta - supportive, human */
-    --secondary: 25 45% 92%;
-    --secondary-foreground: 25 35% 30%;
+    /* Warm peach - supportive, friendly */
+    --secondary: 25 80% 94%;
+    --secondary-foreground: 25 60% 35%;
 
-    /* Muted tones */
-    --muted: 40 20% 94%;
-    --muted-foreground: 30 10% 50%;
+    /* Clean muted tones */
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
 
-    /* Soft teal accent */
-    --accent: 175 35% 90%;
-    --accent-foreground: 175 40% 30%;
+    /* Bright teal accent */
+    --accent: 175 50% 92%;
+    --accent-foreground: 175 55% 30%;
 
-    /* Status colors - softened for mental health context */
-    --success: 150 35% 45%;
-    --success-soft: 150 40% 92%;
-    --warning: 40 60% 50%;
-    --warning-soft: 40 70% 92%;
-    --severe: 15 45% 50%;
-    --severe-soft: 15 55% 93%;
-    --info: 200 40% 50%;
-    --info-soft: 200 50% 93%;
+    /* Status colors - clear but gentle */
+    --success: 158 50% 45%;
+    --success-soft: 158 55% 92%;
+    --warning: 38 85% 55%;
+    --warning-soft: 38 90% 92%;
+    --severe: 12 65% 55%;
+    --severe-soft: 12 70% 94%;
+    --info: 205 70% 55%;
+    --info-soft: 205 75% 94%;
 
-    /* Severity scale - gentle progression */
-    --severity-minimal: 150 35% 45%;
-    --severity-mild: 90 35% 50%;
-    --severity-moderate: 45 55% 50%;
-    --severity-moderately-severe: 25 50% 50%;
-    --severity-severe: 15 45% 50%;
+    /* Severity scale - clear visual hierarchy */
+    --severity-minimal: 158 50% 45%;
+    --severity-mild: 85 50% 48%;
+    --severity-moderate: 42 80% 50%;
+    --severity-moderately-severe: 25 70% 52%;
+    --severity-severe: 12 65% 55%;
 
-    --destructive: 0 60% 50%;
-    --destructive-foreground: 40 30% 98%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 92%;
-    --ring: 150 25% 45%;
+    --border: 220 20% 90%;
+    --input: 220 15% 93%;
+    --ring: 168 55% 42%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
-    /* Custom shadows - soft and warm */
-    --shadow-soft: 0 4px 20px -4px hsl(30 20% 20% / 0.08);
-    --shadow-card: 0 8px 30px -8px hsl(30 20% 20% / 0.1);
-    --shadow-glow: 0 0 40px hsl(150 25% 45% / 0.15);
+    /* Custom shadows - crisp and clean */
+    --shadow-soft: 0 4px 20px -4px hsl(220 25% 20% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(220 25% 20% / 0.12);
+    --shadow-glow: 0 0 40px hsl(168 55% 42% / 0.2);
 
     /* Sidebar */
-    --sidebar-background: 40 25% 97%;
-    --sidebar-foreground: 30 15% 30%;
-    --sidebar-primary: 150 25% 45%;
-    --sidebar-primary-foreground: 40 30% 98%;
-    --sidebar-accent: 40 20% 94%;
-    --sidebar-accent-foreground: 30 15% 30%;
-    --sidebar-border: 40 20% 88%;
-    --sidebar-ring: 150 25% 45%;
+    --sidebar-background: 220 15% 98%;
+    --sidebar-foreground: 220 20% 30%;
+    --sidebar-primary: 168 55% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 95%;
+    --sidebar-accent-foreground: 220 20% 30%;
+    --sidebar-border: 220 20% 90%;
+    --sidebar-ring: 168 55% 42%;
   }
 
   .dark {
@@ -183,7 +183,7 @@
   /* Text gradient */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(175 40% 40%) 100%);
+    background-image: linear-gradient(135deg, hsl(168 65% 38%) 0%, hsl(195 70% 42%) 100%);
   }
 }
 

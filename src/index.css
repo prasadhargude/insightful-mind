@@ -2,95 +2,121 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import '@fontsource/plus-jakarta-sans/400.css';
+@import '@fontsource/plus-jakarta-sans/500.css';
+@import '@fontsource/plus-jakarta-sans/600.css';
+@import '@fontsource/plus-jakarta-sans/700.css';
+
+/* Mental Health App Design System - Calm & Supportive */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm, calming palette */
+    --background: 40 30% 98%;
+    --foreground: 30 15% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 25% 99%;
+    --card-foreground: 30 15% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 25% 99%;
+    --popover-foreground: 30 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Soft sage green - calm, nature-inspired */
+    --primary: 150 25% 45%;
+    --primary-foreground: 40 30% 98%;
+    --primary-soft: 150 30% 92%;
+    --primary-glow: 150 35% 85%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm terracotta - supportive, human */
+    --secondary: 25 45% 92%;
+    --secondary-foreground: 25 35% 30%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones */
+    --muted: 40 20% 94%;
+    --muted-foreground: 30 10% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Soft teal accent */
+    --accent: 175 35% 90%;
+    --accent-foreground: 175 40% 30%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Status colors - softened for mental health context */
+    --success: 150 35% 45%;
+    --success-soft: 150 40% 92%;
+    --warning: 40 60% 50%;
+    --warning-soft: 40 70% 92%;
+    --severe: 15 45% 50%;
+    --severe-soft: 15 55% 93%;
+    --info: 200 40% 50%;
+    --info-soft: 200 50% 93%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Severity scale - gentle progression */
+    --severity-minimal: 150 35% 45%;
+    --severity-mild: 90 35% 50%;
+    --severity-moderate: 45 55% 50%;
+    --severity-moderately-severe: 25 50% 50%;
+    --severity-severe: 15 45% 50%;
 
-    --radius: 0.5rem;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 40 30% 98%;
 
-    --sidebar-background: 0 0% 98%;
+    --border: 40 20% 88%;
+    --input: 40 20% 92%;
+    --ring: 150 25% 45%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --radius: 1rem;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Custom shadows - soft and warm */
+    --shadow-soft: 0 4px 20px -4px hsl(30 20% 20% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(30 20% 20% / 0.1);
+    --shadow-glow: 0 0 40px hsl(150 25% 45% / 0.15);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: 40 25% 97%;
+    --sidebar-foreground: 30 15% 30%;
+    --sidebar-primary: 150 25% 45%;
+    --sidebar-primary-foreground: 40 30% 98%;
+    --sidebar-accent: 40 20% 94%;
+    --sidebar-accent-foreground: 30 15% 30%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 150 25% 45%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 30 15% 10%;
+    --foreground: 40 20% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 15% 12%;
+    --card-foreground: 40 20% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 15% 12%;
+    --popover-foreground: 40 20% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 150 30% 55%;
+    --primary-foreground: 30 15% 10%;
+    --primary-soft: 150 20% 20%;
+    --primary-glow: 150 25% 25%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 30 20% 18%;
+    --secondary-foreground: 40 20% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 30 15% 18%;
+    --muted-foreground: 40 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 175 25% 18%;
+    --accent-foreground: 175 40% 80%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 30 15% 22%;
+    --input: 30 15% 22%;
+    --ring: 150 30% 55%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 30 15% 8%;
+    --sidebar-foreground: 40 20% 85%;
+    --sidebar-primary: 150 30% 55%;
+    --sidebar-primary-foreground: 30 15% 10%;
+    --sidebar-accent: 30 15% 15%;
+    --sidebar-accent-foreground: 40 20% 85%;
+    --sidebar-border: 30 15% 22%;
+    --sidebar-ring: 150 30% 55%;
   }
 }
 
@@ -99,7 +125,128 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 }
+
+@layer components {
+  /* Calm card styling */
+  .calm-card {
+    @apply bg-card rounded-2xl shadow-soft border border-border/50;
+  }
+
+  /* Soft button styles */
+  .btn-calm {
+    @apply px-6 py-3 rounded-xl font-medium transition-all duration-300;
+    @apply hover:shadow-soft hover:-translate-y-0.5;
+    @apply focus:outline-none focus:ring-2 focus:ring-ring/50;
+  }
+
+  /* Gentle input styling */
+  .input-calm {
+    @apply w-full px-4 py-3 rounded-xl border border-border bg-background/50;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50;
+    @apply transition-all duration-300 placeholder:text-muted-foreground/60;
+  }
+
+  /* Severity badge base */
+  .severity-badge {
+    @apply px-4 py-1.5 rounded-full text-sm font-medium;
+  }
+
+  /* Breathing animation container */
+  .breathing-glow {
+    animation: breathing 4s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  /* Gradient utilities */
+  .gradient-calm {
+    background: linear-gradient(135deg, hsl(var(--primary-soft)) 0%, hsl(var(--accent)) 100%);
+  }
+
+  .gradient-warm {
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary-soft)) 100%);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--primary-soft) / 0.3) 100%);
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(175 40% 40%) 100%);
+  }
+}
+
+/* Custom animations */
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-breathing {
+  animation: breathing 4s ease-in-out infinite;
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
